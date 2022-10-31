@@ -1,22 +1,31 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+
 package assignment.lecturer;
 
+import dal.assignment.LecturerDBContext;
+import dal.assignment.SessionDBContext;
+import dal.assignment.TimeSlotDBContext;
+import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
+import model.assignment.Lecturer;
+import model.assignment.Session;
+import model.assignment.TimeSlot;
+import util.DateTimeHelper;
 
 /**
  *
- * @author VuongNV
+ * @author Hello Ngo Tung Son handsome
  */
-public class TimetableController extend HttpServlet {
+public class TimetableController extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -95,5 +104,6 @@ public class TimetableController extend HttpServlet {
     }
 
     
- 
+
+
 }
