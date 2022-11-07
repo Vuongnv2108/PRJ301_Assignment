@@ -15,15 +15,16 @@ import java.util.logging.Logger;
 /**
  *
  * @author Ngo Tung Son
+ * @param <T>
  */
 public abstract class DBContext<T> {
     protected Connection connection;
     public DBContext()
     {
         try {
-            String user = "sa";
-            String pass = "12345678";
-            String url = "jdbc:sqlserver://localhost\\SQLEXPRESS:1433;databaseName=PRJ301_FALL2022_Assignment";
+            String user = "vuong";
+            String pass = "1";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=prj";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             connection = DriverManager.getConnection(url, user, pass);
         } catch (ClassNotFoundException ex) {
