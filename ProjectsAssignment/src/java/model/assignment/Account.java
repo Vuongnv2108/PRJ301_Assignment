@@ -4,8 +4,6 @@
  */
 package model.assignment;
 
-import model.*;
-
 /**
  *
  * @author sonnt
@@ -14,6 +12,35 @@ public class Account {
     private String username;
     private String password;
     private String displayname;
+    private Student student;
+    private Lecturer lecture;
+    private boolean isstudent;
+
+    public Lecturer getLecture() {
+        return lecture;
+    }
+
+    public void setLecture(Lecturer lecture) {
+        this.lecture = lecture;
+    }
+    
+
+    public boolean isIsstudent() {
+        return isstudent;
+    }
+
+    public void setIsstudent(boolean isstudent) {
+        this.isstudent = isstudent;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+    
 
     public String getUsername() {
         return username;

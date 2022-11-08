@@ -21,6 +21,10 @@ public class Session {
     private int index;
     private boolean attandated; 
     private ArrayList<Attandance> attandances = new ArrayList<>();
+    private ArrayList<Student> students = new ArrayList<>();
+    
+    
+    
 
     public int getId() {
         return id;
@@ -93,5 +97,13 @@ public class Session {
     public void setAttandances(ArrayList<Attandance> attandances) {
         this.attandances = attandances;
     }
-    
+
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(ArrayList<Student> students) {
+        this.students = students;
+    }
+
 }

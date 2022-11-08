@@ -54,9 +54,5 @@ public class Attandance {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public void setStudent(model.Student s) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
 }

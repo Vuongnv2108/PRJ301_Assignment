@@ -4,7 +4,7 @@
  */
 package assignment.student;
 
-import dal.AttandanceDBContext;
+import dal.assignment.AttandanceDBContext;
 import dal.StudentDBContext;
 import dal.assignment.SessionDBContext;
 import dal.assignment.TimeSlotDBContext;
@@ -68,7 +68,7 @@ public class TimetableStudentController extends HttpServlet {
         request.setAttribute("sessions", sessions);
         
         StudentDBContext stuDB = new StudentDBContext();
-        model.Student student = stuDB.get(stdid);
+        model.assignment.Student student = stuDB.get(stdid);
         request.setAttribute("student", student);
         
         AttandanceDBContext attDB = new AttandanceDBContext();
@@ -105,3 +105,4 @@ public class TimetableStudentController extends HttpServlet {
     throws ServletException, IOException {
         processRequest(request, response);
     }
+}
