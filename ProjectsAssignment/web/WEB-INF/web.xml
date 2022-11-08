@@ -17,10 +17,6 @@
         <servlet-class>controller.student.DeleteController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LecturerTimetableController</servlet-name>
-        <servlet-class>assignment.lecturer.TimetableController</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AServlet</servlet-name>
         <servlet-class>demo.AServlet</servlet-class>
     </servlet>
@@ -53,8 +49,16 @@
         <servlet-class>demo.EditTeacherController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>TakeAttController</servlet-name>
-        <servlet-class>controller.lecturer.TakeAttController</servlet-class>
+        <servlet-name>studenttimetablecontroller</servlet-name>
+        <servlet-class>assignment.student.TimetableController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>lecturetimetable</servlet-name>
+        <servlet-class>assignment.lecturer.TimetableController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>takeattcontroll?</servlet-name>
+        <servlet-class>assignment.lecturer.AttController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ListStudentController</servlet-name>
@@ -71,10 +75,6 @@
     <servlet-mapping>
         <servlet-name>DeleteController</servlet-name>
         <url-pattern>/student/delete</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LecturerTimetableController</servlet-name>
-        <url-pattern>/lecturer/timetable</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AServlet</servlet-name>
@@ -109,8 +109,16 @@
         <url-pattern>/teacher/edit</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>TakeAttController</servlet-name>
-        <url-pattern>/TakeAttController</url-pattern>
+        <servlet-name>studenttimetablecontroller</servlet-name>
+        <url-pattern>/student/timetable</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>lecturetimetable</servlet-name>
+        <url-pattern>/lecture/timetable</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>takeattcontroll?</servlet-name>
+        <url-pattern>/lecture/takeatt</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
