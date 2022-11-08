@@ -50,14 +50,13 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
         AccountDBContext db = new AccountDBContext();
         Account account = db.get(username, password);
-        if(account==null)
-        {
-            response.getWriter().println("login failed!");
-        }
-        else
-        {
+        if (account == null) {
+            //request.setAttribute("ms", "Username or Password are invalid");
+            request.getRequestDispatcher("view/auth/login.jsp").forward(request, response);
+
+        } else {
             request.getSession().setAttribute("account", account);
-            response.getWriter().println("login successful!");
+            request.getRequestDispatcher("view/auth/loginhome.jsp").forward(request, response);
         }
 
     }

@@ -11,42 +11,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <script>
-            function removeStudent(id)
-            {
-                var result = confirm("are you fucking sure?");
-                if(result)
-                    window.location.href="delete?id="+id;
-            }
-        </script>
     </head>
     <body>
-        <table>
-            <tr>
-                <td>Id</td>
-                <td>Name</td>
-                <td>Gender</td>
-                <td>Dob</td>
-                <td>Created Time</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <c:forEach items="${requestScope.students}" var="s">
-                <tr>
-                    <td>${s.id}</td>
-                    <td>${s.name}</td>
-                    <td>${s.gender}</td>
-                    <td>${s.dob}</td>
-                    <td>${s.created_time}</td>
-                    <td>
-                        <a href="update?id=${s.id}">Edit</a>
-                    </td>
-                    <td>
-                        <a href="#" onclick="removeStudent(${s.id})">Delete</a>
-                    </td>
-                </tr>
-            </c:forEach>
-        </table>
-        <a href="insert">Insert</a>
+        <c:if test="${sessionScope.account ne null}">
+            Hello ${sessionScope.account.displayname}, click 
+            <a href="logout">here</a> to logout. 
+        </c:if>
+        <c:if test="${sessionScope.account eq null}">
+            click 
+            <a href="login">here</a> to login. 
+        </c:if>
     </body>
 </html>
