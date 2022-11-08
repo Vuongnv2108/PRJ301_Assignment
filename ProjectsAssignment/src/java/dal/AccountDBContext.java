@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Account;
+import model.assignment.Lecturer;
+import model.assignment.Student;
 
 /**
  *
@@ -20,7 +22,7 @@ public class AccountDBContext extends DBContext<Account> {
 
     public Account get(String username, String password) {
         try {
-            String sql = "SELECT username,displayname FROM Account \n"
+            String sql = "SELECT lid,stdid,username,displayname,student FROM Account2\n"
                     + "WHERE username = ? AND [password] = ?";
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1, username);
@@ -29,8 +31,15 @@ public class AccountDBContext extends DBContext<Account> {
             if(rs.next())
             {
                 Account account = new Account();
+                Student student = new Student();
+                student.setId(rs.getInt("stdid"));
+                Lecturer lecture = new Lecturer();
+                lecture.setId(rs.getInt("lid"));
+                account.setLecture(lecture);
+                account.setStudent(student);
                 account.setUsername(username);
                 account.setDisplayname(rs.getString("displayname"));
+                account.setIsstudent(rs.getBoolean("student"));
                 return account;
             }
         } catch (SQLException ex) {
@@ -65,3 +74,4 @@ public class AccountDBContext extends DBContext<Account> {
     }
 
 }
+

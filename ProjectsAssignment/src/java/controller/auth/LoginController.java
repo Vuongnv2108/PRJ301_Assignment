@@ -22,6 +22,8 @@ public class LoginController extends HttpServlet {
    
      
 
+     
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
      * Handles the HTTP <code>GET</code> method.
@@ -50,13 +52,17 @@ public class LoginController extends HttpServlet {
         String password = request.getParameter("password");
         AccountDBContext db = new AccountDBContext();
         Account account = db.get(username, password);
-        if (account == null) {
-            //request.setAttribute("ms", "Username or Password are invalid");
+        if(account==null)
+        {
+            request.setAttribute("ms", "Username or password are invalid!!");
             request.getRequestDispatcher("view/auth/login.jsp").forward(request, response);
-
-        } else {
+        }
+        else
+        {
             request.getSession().setAttribute("account", account);
-            request.getRequestDispatcher("view/auth/loginhome.jsp").forward(request, response);
+            request.setAttribute("account", account);
+            request.getRequestDispatcher("view/auth/home.jsp").forward(request, response);
+            
         }
 
     }
