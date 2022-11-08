@@ -15,7 +15,7 @@
     </head>
     <body>
         <table>
-            <tr><td><h1 style="background-color: orange" ><center>TIME TABLE</center></h1></td></tr>
+            <tr><td><h1><center>TIME TABLE</center></h1></td></tr>
         </table>
         </br>
         Student: <input type="text" readonly="readonly" value="${requestScope.student.name}"/>
@@ -29,12 +29,12 @@
             <tr>
                 <td> </td>
                 <c:forEach items="${requestScope.dates}" var="d">
-                    <td style="background-color: yellow"><center>${d}<br/>${helper.getDayNameofWeek(d)}</center></td>
+                    <td><center>${d}<br/>${helper.getDayNameofWeek(d)}</center></td>
                     </c:forEach>
             </tr>
             <c:forEach items="${requestScope.slots}" var="slot">
                 <tr>
-                    <td style="background-color: yellow"><center>${slot.description}</center></td>
+                    <td><center>${slot.description}</center></td>
                     <c:forEach items="${requestScope.dates}" var="d">
                         <td>
                             <c:forEach items="${requestScope.attandances}" var="att">
@@ -51,7 +51,7 @@
                                         
                                     </c:if>
                                     <c:if test="${!att.session.attandated}">
-                                        <a style = "color: blue"><center>not yet</center></a>
+                                        <a><center>not yet</center></a>
                                     </c:if>
                                 </c:if>
 

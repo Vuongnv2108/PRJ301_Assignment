@@ -13,7 +13,7 @@
     <body>
 
         <form action="login" method="POST">
-            <table>
+            <table  >
 
                 <tr>
                     <td>Username:</td>
@@ -27,7 +27,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <div style="color: red">${requestScope.ms}</div>
+                        <div>${requestScope.ms}</div>
                     </td>
                 </tr>
             </table>
