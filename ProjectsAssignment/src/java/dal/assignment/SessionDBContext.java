@@ -26,7 +26,6 @@ import model.assignment.TimeSlot;
  */
 public class SessionDBContext extends dal.DBContext<Session> {
 
-
     public ArrayList<Session> filter(int stdid, Date from, Date to) {
         ArrayList<Session> sessions = new ArrayList<>();
         try {

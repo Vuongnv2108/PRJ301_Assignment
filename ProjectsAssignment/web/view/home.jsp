@@ -1,7 +1,7 @@
 <%-- 
-    Document   : list
-    Created on : Sep 30, 2022, 3:23:59 PM
-    Author     : Ngo Tung Son
+    Document   : home
+    Created on : Oct 17, 2022, 3:12:58 PM
+    Author     : sonnt
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

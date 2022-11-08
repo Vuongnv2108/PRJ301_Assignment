@@ -13,20 +13,19 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.assignment.Attandance;
-import model.assignment.Session;
-import model.assignment.Student;
 import model.assignment.Group;
 import model.assignment.Lecturer;
 import model.assignment.Room;
+import model.assignment.Session;
+import model.assignment.Student;
 import model.assignment.Subject;
 import model.assignment.TimeSlot;
 
 /**
  *
- * @author sonnt
+ * @author Admin
  */
 public class AttandanceDBContext extends DBContext<Attandance> {
-
     public ArrayList<Attandance> filter(int stdid, Date from, Date to) {
         ArrayList<Attandance> attandance = new ArrayList<>();
         try {
@@ -62,7 +61,7 @@ public class AttandanceDBContext extends DBContext<Attandance> {
 
                 Session session = new Session();
                 Lecturer l = new Lecturer();
-                model.assignment.Student std = new model.assignment.Student();
+                Student std = new Student();
                 Room r = new Room();
                 Group g = new Group();
                 TimeSlot t = new TimeSlot();

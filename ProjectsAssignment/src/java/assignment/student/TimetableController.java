@@ -2,31 +2,34 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
+
 package assignment.student;
 
 import dal.assignment.AttandanceDBContext;
-import dal.StudentDBContext;
 import dal.assignment.SessionDBContext;
+import dal.assignment.StudentDBContext;
 import dal.assignment.TimeSlotDBContext;
+import java.io.IOException;
+import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import model.assignment.Attandance;
 import model.assignment.Session;
+import model.assignment.Student;
 import model.assignment.TimeSlot;
 import util.DateTimeHelper;
 
 /**
  *
- * @author VuongNV
+ * @author Hello Ngo Tung Son handsome
  */
-public class TimetableStudentController extends HttpServlet {
-
- /** 
+public class TimetableController extends HttpServlet {
+   
+    /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
      * @param response servlet response
@@ -68,7 +71,7 @@ public class TimetableStudentController extends HttpServlet {
         request.setAttribute("sessions", sessions);
         
         StudentDBContext stuDB = new StudentDBContext();
-        model.assignment.Student student = stuDB.get(stdid);
+        Student student = stuDB.get(stdid);
         request.setAttribute("student", student);
         
         AttandanceDBContext attDB = new AttandanceDBContext();
@@ -105,4 +108,8 @@ public class TimetableStudentController extends HttpServlet {
     throws ServletException, IOException {
         processRequest(request, response);
     }
+
+    
+
+
 }

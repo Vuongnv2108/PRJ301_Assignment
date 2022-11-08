@@ -4,18 +4,12 @@
  */
 package model.assignment;
 
-import java.sql.Date;
 import java.util.ArrayList;
-import model.assignment.Attandance;
-import model.assignment.Group;
 
 /**
  *
  * @author Ngo Tung Son
  */
-
-
-
 public class Student {
     private int id;
     private String name;

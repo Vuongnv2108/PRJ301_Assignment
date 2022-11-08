@@ -5,7 +5,7 @@
 
 package controller.auth;
 
-import dal.AccountDBContext;
+import dal.assignment.AccountDBContext;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -20,8 +20,6 @@ import model.assignment.Account;
  */
 public class LoginController extends HttpServlet {
    
-     
-
      
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
