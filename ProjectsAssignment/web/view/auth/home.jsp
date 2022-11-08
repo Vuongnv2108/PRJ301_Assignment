@@ -27,21 +27,5 @@
             </c:if>
                 
     </body>
-    <style type="text/css">
-        body{
-            position:relative;
-            height:650px;
-            width:1325px;
-            margin:auto;
-            background-image: url(img/fpt.jpg);
-            background-size: cover;
-            background-repeat: no repeat;
-        }
-        form{
-            color:white;
-        }
-        a{
-            color:white;
-        }
-    </style>
+   
 </html>
